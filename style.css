@@ -28,7 +28,7 @@ body{
     padding: 0;
     background: url('img/lantern.jpg') no-repeat;
     background-size: cover;
-    background-position: 20% center;
+    background-position: center;
 }
 
 #wrap-intro{
@@ -117,7 +117,8 @@ body{
 
 #profile{
     max-width: 1280px;
-    text-align: center
+    text-align: center;
+    margin-top: -5rem;
 }
 
 .line-decor{
@@ -134,8 +135,19 @@ body{
 
 .line-gold{
     width: 100%;
-    background-image: linear-gradient(to bottom, #d08b59, #ffe2a3);
     height: 1rem;   
+}
+
+.top{
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(to bottom, #d08b59, #ffe2a3);
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    background-image: linear-gradient(to top, #d08b59, #ffe2a3);
 }
 
 @media all and (max-width: 768px){
@@ -144,7 +156,15 @@ body{
         grid-template-columns: 1fr 1fr;
     }
     .line-decor img{
-        width: 70%;
+        width: 80%;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        background: url('img/lantern.jpg') no-repeat;
+        background-size: 300%;
+        /* background-position: 20% center; */
     }
 }
 
@@ -154,6 +174,6 @@ body{
         grid-template-columns: 1fr;
     }
     .line-decor img{
-        width: 80%;
+        width: 90%;
     }
 }
