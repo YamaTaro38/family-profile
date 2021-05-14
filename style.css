@@ -1,0 +1,159 @@
+@font-face{
+    src: url('font/Sketsa\ Ramadhan\ Alternates.ttf');
+    font-family: 'SKRA';
+}
+
+@font-face{
+    src: url('font/Quicksand-Bold.ttf');
+    font-family: 'quicksand';
+}
+
+@font-face{
+    src: url('font/Bukhari\ Script.ttf');
+    font-family: 'bukhari';
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 2vmin;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url('img/lantern.jpg') no-repeat;
+    background-size: cover;
+    background-position: 20% center;
+}
+
+#wrap-intro{
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-title{
+    font-size: 4.5rem;
+    color: #43B74B;
+    text-shadow: 2px 2px 2px #208a27;
+    font-family: 'SKRA';
+    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+    background: rgba(255,255,255, 0.7);
+    padding: 2rem;
+    max-width: 820px;
+    animation-name: greenlighten;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes greenlighten{
+    0%{
+        color: #43B74B;
+    }
+    100%{
+        color: #58ff63;
+    }
+}
+
+#wrap-intro h3{
+    font-family: 'bukhari';
+    font-size: 2.25rem;
+    color: #fff;
+    margin-top: -1rem;
+    text-transform: uppercase;
+    font-style: italic;
+    background-image: linear-gradient(90deg, #d08b59, #ffe2a3);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    box-shadow: 4px 4px #d08b59;
+    text-shadow: 0.5px 0.5px#a86a3e;
+    animation-name: goldclint;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes goldclint{
+    0%{
+        background-image: linear-gradient(90deg, #ffe2a3, #d08b59)
+    }
+    100%{
+        background-image: linear-gradient(90deg, #d08b59, #ffe2a3)
+    }
+}
+
+#showcase{
+    max-width: 1280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
+    padding: 1rem;
+}
+
+.eid-card{
+    max-width: 400px;
+    max-height: 400px;
+    border: 10px outset #43B74B;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.eid-card img{
+    width: 100%;
+}
+
+#profile{
+    max-width: 1280px;
+    text-align: center
+}
+
+.line-decor{
+    max-width: 1280px;
+    margin: auto;
+    text-align: center;
+    margin: 5rem;
+}
+
+.line-decor img{
+    width: 50%;
+    text-shadow: 3px 3px rgba(0,0,0,0.5);
+}
+
+.line-gold{
+    width: 100%;
+    background-image: linear-gradient(to bottom, #d08b59, #ffe2a3);
+    height: 1rem;   
+}
+
+@media all and (max-width: 768px){
+    #showcase{
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .line-decor img{
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 568px){
+    #showcase{
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .line-decor img{
+        width: 80%;
+    }
+}
