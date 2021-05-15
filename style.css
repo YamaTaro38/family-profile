@@ -29,6 +29,7 @@ body{
     background: url('img/lantern.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    user-select: none;
 }
 
 #wrap-intro{
